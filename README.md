@@ -1,2 +1,18 @@
-# bank-card-ocr-demo
-银行卡OCR识别Demo，OpenCV+Tesseract，金融影像预处理
+# Bank Card OCR Demo 银行卡号识别
+> 项目场景：金融卡片影像识别，适合银行卡、单证图像预处理+字符识别，课程实践项目
+
+## 技术栈
+- Python
+- OpenCV：灰度转换、高斯降噪、Otsu二值化（处理卡片反光、污渍噪声）
+- Tesseract-OCR：数字字符识别，配置白名单只识别0-9，降低误识别
+
+## 项目功能
+1. 读取银行卡图片，异常捕获
+2. 图像预处理，提升低质量卡片图片识别效果
+3. 提取卡号、过滤无效字符
+4. 卡号4位一组格式化输出
+5. 在原图绘制识别结果，保存输出图片
+
+## 环境安装
+```bash
+pip install opencv-python pytesseract pillow
